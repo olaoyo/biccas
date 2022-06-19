@@ -1,0 +1,31 @@
+// COLOR VARIBLES
+$color-primary: #ffffff;
+$color-secondary: #54BD95;
+$color-tertiary-dark-1: #222938;
+$color-tertiary-dark-2: #161C28;
+
+$color-text-light: #FFFFFF;
+$color-text-dark-1: #A6A6A6;
+$color-text-dark-2: #191A15;
+
+// FONT VARIABLES
+$font-primary: 'Inter', sans-serif;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; //10px / 16px = 62.5% -> 1rem = 10px
+}
+
+body {
+    font-family: $font-primary;
+    font-weight: 500;
+    line-height: 1.6;
+}
