@@ -12,4 +12,33 @@ html {
 body {
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  line-height: 1.6; }
+  line-height: 1.6;
+  color: #ffffff; }
+
+.benefits {
+  background-color: violet; }
+
+.cta {
+  background-color: blue; }
+
+.features {
+  background-color: aquamarine; }
+
+.footer {
+  background-color: black; }
+
+.header {
+  background-color: orangered; }
+
+.hero {
+  background-color: brown; }
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh 40vw min-content 40vw min-content 40vw min-content; }
+
+.partners {
+  background-color: cornflowerblue; }
+
+.plans {
+  background-color: brown; }
