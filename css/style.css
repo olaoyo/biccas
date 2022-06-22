@@ -15,13 +15,17 @@ body {
   line-height: 1.6;
   color: #ffffff; }
 
-.benefits {
+.benefit__img {
+  background-color: forestgreen;
+  grid-column: col-start 6 / center-end; }
+
+.benefit__text {
   background-color: violet;
-  grid-column: center-start / center-end; }
+  grid-column: center-start / col-end 4; }
 
 .cta {
   background-color: blue;
-  grid-column: center-start / center-end; }
+  grid-column: col-start 6 / center-end; }
 
 .features {
   background-color: aquamarine;
@@ -29,25 +33,44 @@ body {
 
 .footer {
   background-color: black;
-  grid-column: center-start / center-end; }
+  grid-column: col-start 6 / center-end; }
 
-.header {
+.navigation {
   background-color: orangered;
   grid-column: center-start / center-end; }
 
-.hero {
+.hero__img {
+  background-color: pink;
+  grid-column: col-start 7 / center-end; }
+
+.hero__text {
   background-color: brown;
-  grid-column: center-start / center-end; }
+  grid-column: center-start / col-end 5; }
 
 .container {
   display: grid;
   grid-template-rows: 10vh 90vh 40vw min-content 40vw min-content 40vw min-content;
-  grid-template-columns: [left-start] 1fr [left-end center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end right-start] 1fr [right-end]; }
+  grid-template-columns: [left-start] minmax(6rem, 1fr) [left-end center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end right-start] minmax(6rem, 1fr) [right-end]; }
+  .container > * {
+    padding: 4rem;
+    font-size: 3rem; }
 
-.partners {
+.partner__activities {
+  background-color: slateblue;
+  grid-column: col-start 7 / center-end; }
+
+.partner__support {
   background-color: cornflowerblue;
-  grid-column: center-start / center-end; }
+  grid-column: center-start / col-end 5; }
 
 .plans {
   background-color: brown;
   grid-column: center-start / center-end; }
+
+.subscribe {
+  background-color: burlywood;
+  grid-column: center-start / col-end 4; }
+
+.testimonials {
+  background-color: indianred;
+  grid-column: center-start / col-end 4; }
