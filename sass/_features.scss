@@ -1,4 +1,12 @@
 .features {
-    background-color: aquamarine;
+    background-color: $color-primary;
     grid-column: center-start / center-end;
+
+    margin: 15rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4.4rem;
+
+    color: $color-text-dark-2;
 }

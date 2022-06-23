@@ -3,10 +3,5 @@
     grid-template-rows: 10vh 90vh 40vw min-content 40vw min-content 40vw min-content;
     grid-template-columns: [left-start] minmax(6rem, 1fr) [left-end 
                             center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end 
-                            right-start] minmax(6rem, 1fr) [right-end];
-
-    & > * {
-        padding: 4rem;
-        font-size: 3rem;
-    }
+                            right-start] minmax(6rem, 1fr) [right-end];    
 }

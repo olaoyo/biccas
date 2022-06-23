@@ -28,8 +28,13 @@ body {
   grid-column: col-start 6 / center-end; }
 
 .features {
-  background-color: aquamarine;
-  grid-column: center-start / center-end; }
+  background-color: #ffffff;
+  grid-column: center-start / center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4.4rem;
+  color: #191A15; }
 
 .footer {
   background-color: black;
@@ -51,9 +56,6 @@ body {
   display: grid;
   grid-template-rows: 10vh 90vh 40vw min-content 40vw min-content 40vw min-content;
   grid-template-columns: [left-start] minmax(6rem, 1fr) [left-end center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end right-start] minmax(6rem, 1fr) [right-end]; }
-  .container > * {
-    padding: 4rem;
-    font-size: 3rem; }
 
 .partner__activities {
   background-color: slateblue;
