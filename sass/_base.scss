@@ -1,6 +1,7 @@
 // COLOR VARIBLES
 $color-primary: #ffffff;
 $color-secondary: #54BD95;
+$color-secondary-dark: #4caa86;
 $color-tertiary-dark-1: #222938;
 $color-tertiary-dark-2: #161C28;
 
@@ -12,7 +13,10 @@ $color-text-dark-2: #191A15;
 $font-primary: 'Inter', sans-serif;
 
 // Font Sizes
-// 8px
+$h1: 8rem; 
+$h2: 5rem;
+$h3: 3rem;
+$p: 1.8rem;
 
 *,
 *::before,
