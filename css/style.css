@@ -32,14 +32,14 @@ body {
   grid-column: center-start / center-end;
   margin: 15rem 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-column-gap: 6rem;
   color: #191A15; }
 
 .feature {
   display: grid;
   grid-template-rows: 15rem max-content repeat(2, min-content);
-  grid-gap: 2rem; }
+  grid-row-gap: 2rem; }
   .feature__img {
     width: 100%;
     height: 100%;
@@ -54,7 +54,8 @@ body {
     background-color: #54BD95;
     border-radius: 70px;
     border: none;
-    padding: 2.5rem 4.5rem;
+    height: 6.6rem;
+    width: 16.2rem;
     align-self: start;
     justify-self: end;
     margin-top: 2rem;
@@ -74,8 +75,57 @@ body {
   grid-column: col-start 6 / center-end; }
 
 .navigation {
-  background-color: orangered;
-  grid-column: center-start / center-end; }
+  background-color: #ffffff;
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(20, [col-start] 1fr [col-end]);
+  font-size: 1.6rem; }
+  .navigation__img {
+    grid-column: col-start 1 / col-end 3;
+    justify-self: start;
+    align-self: center; }
+    .navigation__img-logo {
+      height: 3rem;
+      width: 16rem;
+      margin-left: -1rem; }
+  .navigation__list {
+    grid-column: col-start 9 / col-end 15;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center; }
+  .navigation__link {
+    text-decoration: none;
+    list-style: none;
+    color: #A6A6A6; }
+  .navigation__auth {
+    grid-column: col-start 18 / col-end 20;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: end;
+    align-items: center;
+    margin-right: 1rem; }
+    .navigation__auth-login {
+      color: #A6A6A6; }
+    .navigation__auth-signup {
+      display: inline-block;
+      width: 8rem;
+      height: 4rem;
+      border-radius: 10px;
+      border: none;
+      color: #ffffff;
+      background-color: #54BD95;
+      font-size: 1.6rem;
+      transition: all 0.2s; }
+      .navigation__auth-signup:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(22, 28, 40, 0.2);
+        background-color: #4caa86;
+        cursor: pointer; }
+      .navigation__auth-signup:active, .navigation__auth-signup:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba(22, 28, 40, 0.2); }
 
 .hero__img {
   background-color: pink;

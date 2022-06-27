@@ -5,9 +5,9 @@
     margin: 15rem 0;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    // grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 6rem;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-column-gap: 6rem;
 
     color: $color-text-dark-2;
 }
@@ -15,7 +15,7 @@
 .feature {
     display: grid;
     grid-template-rows: 15rem max-content repeat(2, min-content);
-    grid-gap: 2rem;
+    grid-row-gap: 2rem;
 
     &__img {
         width: 100%;
@@ -37,7 +37,8 @@
         background-color: $color-secondary;
         border-radius: 70px;
         border: none;
-        padding: 2.5rem 4.5rem;
+        height: 6.6rem;
+        width: 16.2rem;
         align-self: start;
         justify-self: end;
         margin-top: 2rem;
@@ -65,11 +66,3 @@
     }
 
 }
-
-// .heading-2 {
-//     font-size: $h2;
-// }
-
-// .heading-3 {
-//     font-size: $h3;
-// }

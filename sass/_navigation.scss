@@ -1,4 +1,83 @@
 .navigation {
-    background-color: orangered;
-    grid-column: center-start / center-end;
+  background-color: $color-primary;
+  grid-column: center-start / center-end;
+
+  display: grid;
+  grid-template-columns: repeat(20, [col-start] 1fr [col-end]);
+  font-size: $p2;
+
+  //   grid-template-columns: repeat(3, 1fr);
+  //   grid-template-columns: 25vw 40vw 25vw;
+  //   grid-template-columns: repeat(10, [col-start ] 14rem [col-end]); // Good Idea but !work exp more
+  //   justify-items: center;
+  //   align-items: center;
+
+  &__img {
+    grid-column: col-start 1 / col-end 3;
+
+    justify-self: start;
+    align-self: center;
+
+    &-logo {
+      height: 3rem;
+      width: 16rem;
+      margin-left: -1rem;
+    }
+  }
+
+  &__list {
+    grid-column: col-start 9 / col-end 15;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+
+  &__link {
+    text-decoration: none;
+    list-style: none;
+    color: $color-text-dark-1;
+  }
+
+  &__auth {
+    grid-column: col-start 18 / col-end 20;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: end;
+    align-items: center;
+
+    margin-right: 1rem;
+
+    &-login {
+      color: $color-text-dark-1;
+    }
+
+    &-signup {
+      display: inline-block;
+      width: 8rem;
+      height: 4rem;
+      border-radius: 10px;
+      border: none;
+      color: $color-primary;
+      background-color: $color-secondary;
+      font-size: $p2;
+      transition: all 0.2s;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-tertiary-dark-2, 0.2);
+        background-color: $color-secondary-dark;
+        cursor: pointer;
+      }
+
+      &:active,
+      &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba($color-tertiary-dark-2, 0.2);
+      }
+    }
+  }
 }
