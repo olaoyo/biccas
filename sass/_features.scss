@@ -7,7 +7,7 @@
     display: grid;
     // grid-template-columns: repeat(3, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-column-gap: 6rem;
+    column-gap: 6rem;
 
     color: $color-text-dark-2;
 }
@@ -15,7 +15,7 @@
 .feature {
     display: grid;
     grid-template-rows: 15rem max-content repeat(2, min-content);
-    grid-row-gap: 2rem;
+    row-gap: 2rem;
 
     &__img {
         width: 100%;

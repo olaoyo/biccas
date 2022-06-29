@@ -12,19 +12,17 @@
   //   justify-items: center;
   //   align-items: center;
 
-  &__img {
+  &__logo {
     grid-column: col-start 1 / col-end 3;
 
+    color: $color-secondary;
+    font-weight: 600;
     justify-self: start;
     align-self: center;
+    margin-left: 1rem;
 
-    &-logo {
-      height: 3rem;
-      width: 16rem;
-      margin-left: -1rem;
-    }
   }
-
+  
   &__list {
     grid-column: col-start 9 / col-end 15;
 
