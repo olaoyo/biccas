@@ -154,16 +154,41 @@ body {
     color: #000000;
     justify-self: start;
     align-self: start; }
-  .hero__text-trial-btn {
-    display: inline-block;
-    background-color: #54BD95;
-    color: #ffffff;
-    height: 6.2rem;
-    width: 16.5rem;
-    border-radius: 40px;
-    border: none; }
-  .hero__text-trial-p {
-    color: #191A15; }
+  .hero__text-trial {
+    display: grid;
+    grid-template-columns: max-content min-content max-content;
+    column-gap: 1.5rem; }
+    .hero__text-trial-btn {
+      display: inline-block;
+      background-color: #54BD95;
+      color: #ffffff;
+      height: 6.2rem;
+      width: 16.5rem;
+      border-radius: 40px;
+      border: none;
+      margin-right: 2rem;
+      justify-self: center;
+      align-self: center;
+      transition: all 0.2s; }
+      .hero__text-trial-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(22, 28, 40, 0.2);
+        background-color: #4caa86;
+        cursor: pointer; }
+      .hero__text-trial-btn:active, .hero__text-trial-btn:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba(22, 28, 40, 0.2); }
+    .hero__text-trial-img {
+      justify-self: center;
+      align-self: center;
+      transition: all 0.2s; }
+      .hero__text-trial-img:hover {
+        cursor: pointer; }
+    .hero__text-trial-p {
+      color: #191A15;
+      justify-self: center;
+      align-self: center; }
 
 .container {
   display: grid;
