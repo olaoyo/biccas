@@ -1,4 +1,133 @@
 .hero__img {
-    background-color: pink;
-    grid-column: col-start 7 / center-end;
+  background-color: pink;
+  grid-column: col-start 7 / center-end;
+
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+
+  &-bg {
+    background-color: $color-secondary;
+    width: 410px; //TODO
+    height: 526px; //TODO
+
+    &--man {
+      //   width: 100%;
+      width: 43.7rem; //TODO
+      height: 43.8rem; //TODO
+    }
+  }
+
+  &-amt {
+    background-color: $color-primary;
+    width: 26.2rem;
+    height: 7.8rem;
+    outline: 1px solid $color-secondary;
+
+    &--text {
+      &---txt {
+        color: $color-text-dark-1;
+      }
+
+      &---num {
+        color: $color-text-dark-3;
+        font-weight: 500;
+      }
+    }
+
+    &--btn {
+    }
+  }
+
+  &-storage {
+    background-color: $color-yellow;
+    border-radius: 10px;
+    width: 4.857rem;
+    height: 4.857rem;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    &--icon {
+      width: 2rem;
+      height: 2rem;
+      fill: $color-white;
+      justify-self: center;
+      align-self: center;
+    }
+  }
+
+  &-check {
+    background-color: $color-purple;
+    border-radius: 10px;
+    width: 4rem;
+    height: 4rem;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    &--icon {
+      width: 2rem;
+      height: 2rem;
+      fill: $color-text-light;
+      justify-self: center;
+      align-self: center;
+    }
+  }
+
+  &-income {
+    background-color: $color-primary;
+    height: 7rem;
+    width: 13.8rem;
+    border-radius: 10px;
+
+    &--text {
+      &---1 {
+        color: $color-text-dark-1;
+      }
+
+      &---2 {
+        color: $color-text-dark-3;
+        font-weight: 500;
+      }
+    }
+
+    &--chart {
+      fill: $color-secondary;
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+
+  &-card {
+    background-color: $color-tertiary-dark-2;
+    height: 18.8rem;
+    width: 14.6rem;
+    border-radius: 10px;
+
+    &--circle {
+      &---1 {
+        background-color: $color-text-dark-1;
+        border-radius: 50px;
+        width: 28px;
+        height: 28px;
+      }
+      &---2 {
+        background-color: $color-text-dark-1;
+        border-radius: 50px;
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    &--text {
+      color: $color-white;
+    }
+
+    &--square {
+      background-color: $color-text-dark-1;
+      width: 3.4rem;
+      height: 2.2rem;
+      border-radius: 4px;
+    }
+  }
 }
