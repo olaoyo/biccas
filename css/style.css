@@ -79,9 +79,12 @@ body {
   grid-column: center-start / center-end;
   display: grid;
   grid-template-columns: repeat(20, [col-start] 1fr [col-end]);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: end;
   font-size: 1.6rem; }
   .navigation__logo {
     grid-column: col-start 1 / col-end 3;
+    display: inline-block;
     color: #54BD95;
     font-weight: 600;
     justify-self: start;
@@ -134,32 +137,77 @@ body {
         box-shadow: 0 0.5rem 1rem rgba(22, 28, 40, 0.2); }
 
 .hero__img {
-  background-color: pink;
-  grid-column: col-start 7 / center-end;
+  background-color: #ffffff;
+  grid-column: col-start 6 / center-end;
   display: grid;
-  grid-template-columns: repeat(8, 1fr); }
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr); }
   .hero__img-bg {
+    grid-column: 4 / 10;
+    grid-row: 2 / 8;
     background-color: #54BD95;
+    height: 526px;
     width: 410px;
-    height: 526px; }
+    border-radius: 10px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); }
     .hero__img-bg--man {
-      width: 43.7rem;
-      height: 43.8rem; }
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      align-self: end; }
   .hero__img-amt {
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+    margin-top: 2rem;
     background-color: #ffffff;
     width: 26.2rem;
     height: 7.8rem;
-    outline: 1px solid #54BD95; }
-    .hero__img-amt--text---txt {
-      color: #A6A6A6; }
-    .hero__img-amt--text---num {
-      color: #000000;
-      font-weight: 500; }
+    border-radius: 10px;
+    box-shadow: 0 0.2rem 0.2rem rgba(22, 28, 40, 0.2);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+    .hero__img-amt--text {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      padding-left: 2rem; }
+      .hero__img-amt--text---txt {
+        color: #A6A6A6;
+        align-self: end;
+        padding-bottom: 0.5rem; }
+      .hero__img-amt--text---num {
+        color: #000000;
+        font-weight: 500; }
+    .hero__img-amt--btn {
+      justify-self: end;
+      align-self: center;
+      padding-right: 2rem; }
+      .hero__img-amt--btn---send {
+        background-color: #54BD95;
+        color: #ffffff;
+        width: 6.4rem;
+        height: 2.8rem;
+        border: none;
+        border-radius: 40px;
+        transition: all 0.2s; }
+        .hero__img-amt--btn---send:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 1rem 2rem rgba(22, 28, 40, 0.2);
+          background-color: #4caa86;
+          cursor: pointer; }
   .hero__img-storage {
+    grid-column: 9 / 10;
+    grid-row: 2 / 3;
+    justify-self: end;
+    align-self: end;
+    margin-right: -2rem;
     background-color: #FBC75E;
     border-radius: 10px;
     width: 4.857rem;
     height: 4.857rem;
+    transform: rotate(15deg);
     display: grid;
     grid-template-columns: repeat(1, 1fr); }
     .hero__img-storage--icon {
@@ -169,10 +217,15 @@ body {
       justify-self: center;
       align-self: center; }
   .hero__img-check {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+    align-self: end;
     background-color: #4535AF;
     border-radius: 10px;
     width: 4rem;
     height: 4rem;
+    transform-origin: bottom left;
+    transform: rotate(-15deg);
     display: grid;
     grid-template-columns: repeat(1, 1fr); }
     .hero__img-check--icon {
@@ -182,41 +235,124 @@ body {
       justify-self: center;
       align-self: center; }
   .hero__img-income {
+    grid-column: 3 / 5;
+    grid-row: 7 / 8;
+    margin-left: -2rem;
     background-color: #ffffff;
     height: 7rem;
     width: 13.8rem;
-    border-radius: 10px; }
-    .hero__img-income--text---1 {
-      color: #A6A6A6; }
-    .hero__img-income--text---2 {
-      color: #000000;
-      font-weight: 500; }
+    border-radius: 10px;
+    box-shadow: 0 0.2rem 0.2rem rgba(22, 28, 40, 0.2);
+    display: grid;
+    grid-template-columns: max-content 1fr; }
+    .hero__img-income--text {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      padding-left: 1rem; }
+      .hero__img-income--text---1 {
+        color: #A6A6A6;
+        align-self: end;
+        padding-bottom: 0.5rem; }
+      .hero__img-income--text---2 {
+        color: #000000;
+        font-weight: 500; }
     .hero__img-income--chart {
       fill: #54BD95;
       height: 2rem;
-      width: 2rem; }
+      width: 2rem;
+      justify-self: center;
+      align-self: center;
+      margin-top: 2rem;
+      transform: scaleX(-1); }
+  .hero__img-chat {
+    grid-column: 7 / 8;
+    grid-row: 9 / 10;
+    background-color: #FFAA94;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 10px;
+    transform: rotate(15deg);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 7rem; }
+    .hero__img-chat--bubble {
+      width: 2rem;
+      height: 2rem;
+      fill: #ffffff;
+      justify-self: center;
+      align-self: center; }
   .hero__img-card {
+    grid-column: 8 / 10;
+    grid-row: 6 / 9;
+    margin: 4rem 0 0 4rem;
     background-color: #161C28;
     height: 18.8rem;
     width: 14.6rem;
-    border-radius: 10px; }
-    .hero__img-card--circle---1 {
-      background-color: #A6A6A6;
-      border-radius: 50px;
-      width: 28px;
-      height: 28px; }
-    .hero__img-card--circle---2 {
-      background-color: #A6A6A6;
-      border-radius: 50px;
-      width: 28px;
-      height: 28px; }
+    border-radius: 10px;
+    transform-origin: bottom right;
+    overflow: hidden;
+    transform: rotate(15deg);
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 1rem; }
+    .hero__img-card--circle {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 1.3rem;
+      position: relative; }
+      .hero__img-card--circle---1 {
+        background-color: #a6a6a699;
+        border-radius: 50px;
+        width: 2.8rem;
+        height: 2.8rem;
+        margin-left: 1rem; }
+      .hero__img-card--circle---2 {
+        background-color: #a6a6a6a9;
+        border-radius: 50px;
+        width: 2.8rem;
+        height: 2.8rem;
+        margin-left: -2rem; }
+      .hero__img-card--circle---3 {
+        background-color: #232937;
+        border-radius: 100px;
+        width: 10.8rem;
+        height: 10.8rem;
+        justify-self: end;
+        align-self: start;
+        position: absolute;
+        bottom: -10%;
+        left: 62%; }
     .hero__img-card--text {
-      color: #F8F8FA; }
-    .hero__img-card--square {
-      background-color: #A6A6A6;
-      width: 3.4rem;
-      height: 2.2rem;
-      border-radius: 4px; }
+      color: #F8F8FA;
+      margin-left: 1rem; }
+    .hero__img-card--btm {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      position: relative; }
+      .hero__img-card--btm---circle {
+        background-color: #232937;
+        width: 12.8rem;
+        height: 12.8rem;
+        border-radius: 100px;
+        justify-self: start;
+        align-self: end;
+        top: -40%;
+        right: 62%;
+        position: absolute;
+        z-index: 1; }
+      .hero__img-card--btm---square {
+        grid-column: 1 / span 1;
+        justify-self: center;
+        align-self: center;
+        background-color: #a6a6a699;
+        width: 3.4rem;
+        height: 2.2rem;
+        border-radius: 4px;
+        z-index: 2; }
+      .hero__img-card--btm---text {
+        grid-column: 3 / span 1;
+        justify-self: center;
+        align-self: center; }
 
 .hero__text {
   grid-column: center-start / col-end 5;
@@ -228,6 +364,15 @@ body {
   .hero__text-h1 {
     color: #191A15;
     line-height: 1.2; }
+    .hero__text-h1::after {
+      content: "";
+      display: block;
+      height: 1rem;
+      width: 60rem;
+      display: block;
+      background-color: #54BD95;
+      margin: 4rem 0 1rem 0;
+      border-radius: 10px; }
   .hero__text-arc {
     justify-self: start;
     align-self: center; }
@@ -273,7 +418,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 10vh 90vh 40vw min-content 40vw min-content 40vw min-content;
+  grid-template-rows: 20vh 80vh 40vw min-content 40vw min-content 40vw min-content;
   grid-template-columns: [left-start] minmax(6rem, 1fr) [left-end center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end right-start] minmax(6rem, 1fr) [right-end]; }
 
 .partner__activities {
@@ -307,3 +452,9 @@ body {
 
 .paragraph-1 {
   font-size: 1.8rem; }
+
+.paragraph-2 {
+  font-size: 1.6rem; }
+
+.paragraph-3 {
+  font-size: 1.2rem; }

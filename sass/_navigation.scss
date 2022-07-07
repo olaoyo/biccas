@@ -4,6 +4,8 @@
 
   display: grid;
   grid-template-columns: repeat(20, [col-start] 1fr [col-end]);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: end;
   font-size: $p2;
 
   //   grid-template-columns: repeat(3, 1fr);
@@ -14,6 +16,7 @@
 
   &__logo {
     grid-column: col-start 1 / col-end 3;
+    display: inline-block;
 
     color: $color-secondary;
     font-weight: 600;
