@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-template-rows: 20vh 80vh 40vw min-content 40vw min-content 40vw min-content;
+    grid-template-rows: 20vh 80vh max-content 40vw min-content 40vw min-content 40vw min-content;
     grid-template-columns: [left-start] minmax(6rem, 1fr) [left-end 
                             center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end 
                             right-start] minmax(6rem, 1fr) [right-end];    
