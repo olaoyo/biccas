@@ -440,13 +440,46 @@ body {
   grid-template-rows: 20vh 80vh max-content 40vw min-content 40vw min-content 40vw min-content;
   grid-template-columns: [left-start] minmax(6rem, 1fr) [left-end center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end right-start] minmax(6rem, 1fr) [right-end]; }
 
-.partner__activities {
-  background-color: slateblue;
-  grid-column: col-start 7 / center-end; }
-
-.partner__support {
-  background-color: cornflowerblue;
-  grid-column: center-start / col-end 5; }
+.partner {
+  background-color: #F9F8FE;
+  grid-column: left-start / right-end;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); }
+  .partner__support {
+    grid-column: 2 / 7;
+    display: grid;
+    grid-template-rows: 1fr max-content 1fr; }
+    .partner__support-h2 {
+      color: #191A15;
+      align-self: center; }
+    .partner__support-p2 {
+      color: #A6A6A6;
+      margin-top: -3rem; }
+    .partner__support-ratings {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center; }
+      .partner__support-ratings--content {
+        display: grid;
+        row-gap: 2rem;
+        grid-template-rows: repeat(3, max-content); }
+        .partner__support-ratings--content---stars {
+          display: grid;
+          column-gap: .2rem;
+          grid-template-columns: repeat(5, min-content); }
+          .partner__support-ratings--content---stars_icon {
+            width: 2.6rem;
+            height: 2.6rem;
+            fill: #FFC728; }
+        .partner__support-ratings--content---p1 {
+          color: #191A15;
+          font-weight: 700; }
+        .partner__support-ratings--content---p2 {
+          color: #A6A6A6;
+          font-weight: 700; }
+  .partner__activities {
+    background-color: slateblue;
+    grid-column: 8 / 12; }
 
 .plans {
   background-color: brown;

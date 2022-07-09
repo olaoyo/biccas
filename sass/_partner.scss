@@ -1,0 +1,64 @@
+.partner {
+  background-color: $color-grey-6;
+  grid-column: left-start / right-end;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  &__support {
+    // background-color: blue;
+    grid-column: 2 / 7;
+
+    display: grid;
+    grid-template-rows: 1fr max-content 1fr;
+
+    &-h2 {
+      color: $color-text-dark-2;
+      align-self: center;
+    }
+
+    &-p2 {
+      color: $color-text-dark-1;
+      margin-top: -3rem;
+    }
+
+    &-ratings {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+
+      &--content {
+        display: grid;
+        row-gap: 2rem;
+        grid-template-rows: repeat(3, max-content);
+
+        &---stars {
+          display: grid;
+          column-gap: .2rem;
+          grid-template-columns: repeat(5, min-content);
+
+          &_icon {
+            width: 2.6rem;
+            height: 2.6rem;
+            fill: $color-gold;
+          }
+        }
+
+        &---p1 {
+          color: $color-text-dark-2;
+          font-weight: 700;
+        }
+
+        &---p2 {
+          color: $color-text-dark-1;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__activities {
+    background-color: slateblue;
+    grid-column: 8 / 12;
+  }
+}
