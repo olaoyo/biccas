@@ -465,7 +465,7 @@ body {
         grid-template-rows: repeat(3, max-content); }
         .partner__support-ratings--content---stars {
           display: grid;
-          column-gap: .2rem;
+          column-gap: 0.2rem;
           grid-template-columns: repeat(5, min-content); }
           .partner__support-ratings--content---stars_icon {
             width: 2.6rem;
@@ -478,8 +478,37 @@ body {
           color: #A6A6A6;
           font-weight: 700; }
   .partner__activities {
-    background-color: slateblue;
-    grid-column: 8 / 12; }
+    grid-column: 8 / 12;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: start;
+    align-items: center; }
+    .partner__activities-items {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      column-gap: 2rem; }
+      .partner__activities-items--icon {
+        width: 6rem;
+        height: 6rem;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.05);
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); }
+        .partner__activities-items--icon---block {
+          width: 3rem;
+          height: 3rem;
+          fill: #54BD95;
+          justify-self: center;
+          align-self: center; }
+      .partner__activities-items--text {
+        display: grid;
+        grid-template-rows: repeat(2, max-content);
+        row-gap: 0.5rem; }
+        .partner__activities-items--text---h4 {
+          color: #191A15; }
+        .partner__activities-items--text---p1 {
+          color: #A6A6A6; }
 
 .plans {
   background-color: brown;
@@ -504,6 +533,9 @@ body {
 
 .heading-3 {
   font-size: 3rem; }
+
+.heading-4 {
+  font-size: 2.8rem; }
 
 .paragraph-1 {
   font-size: 1.8rem; }
