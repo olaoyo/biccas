@@ -58,8 +58,145 @@ body {
             justify-self: start;
             align-self: center; }
   .benefit__img {
-    background-color: forestgreen;
-    grid-column: 8 / 12; }
+    grid-column: 8 / 12;
+    height: 52.9rem;
+    width: 56rem;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(8, 4vw);
+    grid-template-rows: repeat(8, 4vw); }
+    .benefit__img-bg {
+      grid-column: 1 / span 8;
+      grid-row: 1 / span 8;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1; }
+      .benefit__img-bg--laptop {
+        position: absolute;
+        right: -8%;
+        top: -7%;
+        width: 90.7rem;
+        height: 60.4rem; }
+    .benefit__img-expert {
+      grid-column: 1 / 5;
+      grid-row: 2 / 3;
+      margin: -3rem 0 0 -14rem;
+      background-color: #ffffff;
+      width: 30.4rem;
+      height: 8.2rem;
+      border-radius: 10px;
+      padding-left: 1rem;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr max-content 1fr;
+      column-gap: 2rem;
+      justify-items: center;
+      align-items: center;
+      box-shadow: 0 0.2rem 0.2rem rgba(22, 28, 40, 0.2); }
+      .benefit__img-expert--text {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 0.5rem; }
+        .benefit__img-expert--text---p2 {
+          color: #191A15; }
+        .benefit__img-expert--text---p3 {
+          color: #A6A6A6; }
+      .benefit__img-expert--chat {
+        background-color: #54BD95;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        display: grid;
+        grid-template-rows: 1fr; }
+        .benefit__img-expert--chat---icon {
+          height: 1.5rem;
+          width: 1.5rem;
+          fill: #ffffff;
+          justify-self: center;
+          align-self: center; }
+    .benefit__img-income {
+      grid-column: 7 / -1;
+      grid-row: 3 / 4;
+      margin-left: 8rem;
+      background-color: #ffffff;
+      height: 7rem;
+      width: 13.8rem;
+      border-radius: 10px;
+      box-shadow: 0 0.2rem 0.2rem rgba(22, 28, 40, 0.2);
+      z-index: 2;
+      display: grid;
+      grid-template-columns: max-content 1fr; }
+      .benefit__img-income--text {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        padding-left: 1rem; }
+        .benefit__img-income--text---1 {
+          color: #A6A6A6;
+          align-self: end;
+          padding-bottom: 0.5rem; }
+        .benefit__img-income--text---2 {
+          color: #000000;
+          font-weight: 500; }
+      .benefit__img-income--chart {
+        fill: #54BD95;
+        height: 2rem;
+        width: 2rem;
+        justify-self: center;
+        align-self: center;
+        margin-top: 2rem;
+        transform: scaleX(-1); }
+    .benefit__img-pic {
+      grid-column: 1 / 2;
+      grid-row: 6 / 7;
+      background: #54BD95;
+      margin-left: -5.5rem;
+      height: 4rem;
+      width: 4rem;
+      border-radius: 10px;
+      transform: rotate(-15deg);
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr; }
+      .benefit__img-pic--icon {
+        height: 2rem;
+        width: 2rem;
+        fill: #ffffff;
+        justify-self: center;
+        align-self: center; }
+    .benefit__img-success {
+      grid-column: 1 / 5;
+      grid-row: 8 / -1;
+      background-color: #ffffff;
+      width: 32.2rem;
+      height: 6.8rem;
+      border-radius: 10px;
+      box-shadow: 0 0.2rem 0.2rem rgba(22, 28, 40, 0.2);
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      margin: 1.75rem 0 0 -10.5rem;
+      column-gap: 2rem; }
+      .benefit__img-success--block {
+        background-color: #ffffff;
+        width: 2.4rem;
+        height: 2.4rem;
+        border: 2px solid #54BD95;
+        border-radius: 59%;
+        justify-self: center;
+        align-self: center;
+        margin-left: 2rem;
+        display: grid;
+        grid-template-columns: 1fr; }
+        .benefit__img-success--block---icon {
+          width: 1.5rem;
+          height: 1.5rem;
+          fill: #54BD95;
+          justify-self: center;
+          align-self: center; }
+      .benefit__img-success--p1 {
+        color: #191A15;
+        align-self: center; }
 
 .clients {
   background-color: #ffffff;
@@ -203,8 +340,8 @@ body {
     grid-column: 4 / 10;
     grid-row: 2 / 8;
     background-color: #54BD95;
-    height: 526px;
-    width: 410px;
+    height: 52.6rem;
+    width: 41.0rem;
     border-radius: 10px;
     overflow: hidden;
     display: grid;
