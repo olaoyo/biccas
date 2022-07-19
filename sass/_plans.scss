@@ -1,4 +1,292 @@
 .plans {
-    background-color: brown;
-    grid-column: center-start / center-end;
+  grid-column: center-start / center-end;
+
+  display: grid;
+  grid-template-rows: repeat(3, min-content) 1fr;
+  row-gap: 4rem;
+
+  &__h2 {
+    color: $color-text-dark-2;
+    font-weight: 700;
+
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    justify-items: center;
+  }
+
+  &__p1 {
+    color: $color-text-dark-1;
+    font-weight: 700;
+    justify-self: center;
+  }
+
+  &__billing {
+    background-color: $color-primary;
+    width: 34rem;
+    height: 7rem;
+    border-radius: 10px;
+    justify-self: center;
+    box-shadow: 0 0.2rem 0.2rem rgba($color-tertiary-dark-2, 0.2);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+
+    &-button--1 {
+      color: $color-text-dark-2;
+      font-weight: 500;
+      background-color: $color-primary;
+      height: 5.6rem;
+      width: 16rem;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+    }
+
+    &-button--2 {
+      color: $color-text-light;
+      font-weight: 500;
+      background-color: $color-secondary;
+      height: 5.6rem;
+      width: 16rem;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+    }
+  }
+
+  &__tiers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(37.4rem, 1fr));
+    column-gap: 6rem;
+    margin-top: 5rem;
+    justify-items: center;
+
+    &-1 {
+      background-color: $color-primary;
+      width: 37.4rem;
+      height: 64.4rem;
+      border-radius: 20px;
+      box-shadow: 0 0.2rem 0.2rem rgba($color-tertiary-dark-2, 0.2);
+
+      display: grid;
+      grid-template-rows: max-content repeat(2, min-content) 1fr;
+      justify-items: center;
+      align-items: center;
+
+      &--h1 {
+        color: $color-text-dark-2;
+        margin-top: 4rem;
+      }
+
+      &--h1_1 {
+        color: $color-text-dark-2;
+
+        &---sup {
+          color: $color-text-dark-1;
+        }
+      }
+
+      &--p1 {
+        color: $color-text-dark-1;
+        display: grid;
+        grid-template-rows: repeat(2, min-content);
+        justify-items: center;
+      }
+    }
+
+    &-2 {
+      background-color: $color-secondary;
+      width: 37.4rem;
+      height: 68.4rem;
+      border-radius: 20px;
+      transform: translateY(-15px);
+      box-shadow: 0 0.2rem 0.2rem rgba($color-tertiary-dark-2, 0.2);
+      position: relative;
+      overflow: hidden;
+
+      display: grid;
+      grid-template-rows: max-content repeat(3, min-content) 1fr;
+      justify-items: center;
+      align-items: center;
+
+      &--h2 {
+        color: $color-text-light;
+        margin-top: 4rem;
+        z-index: 2;
+      }
+
+      &--circle {
+        background-color: $color-secondary-light-2;
+        border-radius: 50%;
+        width: 60rem;
+        height: 60rem;
+        position: absolute;
+        bottom: -10%;
+        z-index: 1;
+      }
+
+      &--btnSave {
+        background-color: $color-secondary-light-1;
+        color: $color-text-light;
+        font-weight: 600;
+        height: 4rem;
+        width: 13rem;
+        border-radius: 10px;
+        border: none;
+        z-index: 2;
+      }
+
+      &--h2_2 {
+        color: $color-text-light;
+        z-index: 2;
+
+        &---sup {
+          color: $color-text-dark-1;
+        }
+      }
+
+      &--p2 {
+        color: $color-primary;
+        display: grid;
+        grid-template-rows: repeat(2, min-content);
+        justify-items: center;
+        z-index: 2;
+      }
+    }
+
+    &-3 {
+      background-color: $color-primary;
+      width: 37.4rem;
+      height: 64.4rem;
+      border-radius: 20px;
+      box-shadow: 0 0.2rem 0.2rem rgba($color-tertiary-dark-2, 0.2);
+
+      display: grid;
+      grid-template-rows: max-content repeat(2, min-content) 1fr;
+      justify-items: center;
+      align-items: center;
+
+      display: grid;
+      justify-items: center;
+
+      &--h3 {
+        color: $color-text-dark-2;
+        margin-top: 4rem;
+      }
+
+      &--h3_3 {
+        color: $color-text-dark-2;
+
+        &---sup {
+          color: $color-text-dark-1;
+        }
+      }
+
+      &--p3 {
+        color: $color-text-dark-1;
+        display: grid;
+        grid-template-rows: repeat(2, min-content);
+        justify-items: center;
+      }
+    }
+
+    &-features {
+      display: grid;
+      grid-template-rows: 1fr min-content;
+      z-index: 2;
+
+      &--items {
+        background-color: $color-grey-7;
+        height: 38rem;
+        width: 33.4rem;
+        border-radius: 10px;
+        padding: 2rem 0 2rem 0;
+
+        display: grid;
+        grid-template-rows: 1fr min-content;
+        justify-items: center;
+
+        &---content {
+          display: grid;
+          grid-template-rows: repeat(5, 1fr);
+          row-gap: 2rem;
+
+          &----block {
+            display: grid;
+            grid-template-columns: min-content 1fr;
+            column-gap: 1.5rem;
+
+            &-----icon {
+              background-color: $color-secondary;
+              border-radius: 50px;
+              width: 3.2rem;
+              height: 3.2rem;
+              justify-self: start;
+              align-self: center;
+
+              display: grid;
+              grid-template-columns: 1fr;
+
+              &------wrap {
+                width: 2rem;
+                height: 2rem;
+                fill: $color-primary;
+                justify-self: center;
+                align-self: center;
+              }
+            }
+
+            &-----p1 {
+              color: $color-text-dark-2;
+              font-weight: 500;
+              justify-self: start;
+              align-self: center;
+            }
+          }
+        }
+      }
+
+      &--btn1 {
+        background-color: $color-primary;
+        color: $color-secondary;
+        font-weight: 600;
+        width: 26rem;
+        height: 6.4rem;
+        border-radius: 20px;
+        border: none;
+        margin-top: 2rem;
+        box-shadow: 0 0.2rem 0.2rem rgba($color-tertiary-dark-2, 0.2);
+
+      }
+
+      &--btn2 {
+        background-color: $color-secondary;
+        color: $color-primary;
+        font-weight: 600;
+        width: 26rem;
+        height: 6.4rem;
+        border-radius: 20px;
+        border: none;
+        margin-top: 2rem;
+        box-shadow: 0 0.2rem 0.2rem rgba($color-tertiary-dark-2, 0.2);
+
+        z-index: 2;
+      }
+
+      &--btn3 {
+        background-color: $color-primary;
+        color: $color-secondary;
+        font-weight: 600;
+        width: 26rem;
+        height: 6.4rem;
+        border-radius: 20px;
+        border: none;
+        margin-top: 2rem;
+        box-shadow: 0 0.2rem 0.2rem rgba($color-tertiary-dark-2, 0.2);
+
+      }
+    }
+  }
 }

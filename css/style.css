@@ -686,8 +686,218 @@ body {
           color: #A6A6A6; }
 
 .plans {
-  background-color: brown;
-  grid-column: center-start / center-end; }
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-rows: repeat(3, min-content) 1fr;
+  row-gap: 4rem; }
+  .plans__h2 {
+    color: #191A15;
+    font-weight: 700;
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    justify-items: center; }
+  .plans__p1 {
+    color: #A6A6A6;
+    font-weight: 700;
+    justify-self: center; }
+  .plans__billing {
+    background-color: #ffffff;
+    width: 34rem;
+    height: 7rem;
+    border-radius: 10px;
+    justify-self: center;
+    box-shadow: 0 0.2rem 0.2rem rgba(22, 28, 40, 0.2);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center; }
+    .plans__billing-button--1 {
+      color: #191A15;
+      font-weight: 500;
+      background-color: #ffffff;
+      height: 5.6rem;
+      width: 16rem;
+      border-radius: 10px;
+      border: none;
+      outline: none; }
+    .plans__billing-button--2 {
+      color: #FFFFFF;
+      font-weight: 500;
+      background-color: #54BD95;
+      height: 5.6rem;
+      width: 16rem;
+      border-radius: 10px;
+      border: none;
+      outline: none; }
+  .plans__tiers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(37.4rem, 1fr));
+    column-gap: 6rem;
+    margin-top: 5rem;
+    justify-items: center; }
+    .plans__tiers-1 {
+      background-color: #ffffff;
+      width: 37.4rem;
+      height: 64.4rem;
+      border-radius: 20px;
+      box-shadow: 0 0.2rem 0.2rem rgba(22, 28, 40, 0.2);
+      display: grid;
+      grid-template-rows: max-content repeat(2, min-content) 1fr;
+      justify-items: center;
+      align-items: center; }
+      .plans__tiers-1--h1 {
+        color: #191A15;
+        margin-top: 4rem; }
+      .plans__tiers-1--h1_1 {
+        color: #191A15; }
+        .plans__tiers-1--h1_1---sup {
+          color: #A6A6A6; }
+      .plans__tiers-1--p1 {
+        color: #A6A6A6;
+        display: grid;
+        grid-template-rows: repeat(2, min-content);
+        justify-items: center; }
+    .plans__tiers-2 {
+      background-color: #54BD95;
+      width: 37.4rem;
+      height: 68.4rem;
+      border-radius: 20px;
+      transform: translateY(-15px);
+      box-shadow: 0 0.2rem 0.2rem rgba(22, 28, 40, 0.2);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: max-content repeat(3, min-content) 1fr;
+      justify-items: center;
+      align-items: center; }
+      .plans__tiers-2--h2 {
+        color: #FFFFFF;
+        margin-top: 4rem;
+        z-index: 2; }
+      .plans__tiers-2--circle {
+        background-color: #6BC2A1;
+        border-radius: 50%;
+        width: 60rem;
+        height: 60rem;
+        position: absolute;
+        bottom: -10%;
+        z-index: 1; }
+      .plans__tiers-2--btnSave {
+        background-color: #85DAB9;
+        color: #FFFFFF;
+        font-weight: 600;
+        height: 4rem;
+        width: 13rem;
+        border-radius: 10px;
+        border: none;
+        z-index: 2; }
+      .plans__tiers-2--h2_2 {
+        color: #FFFFFF;
+        z-index: 2; }
+        .plans__tiers-2--h2_2---sup {
+          color: #A6A6A6; }
+      .plans__tiers-2--p2 {
+        color: #ffffff;
+        display: grid;
+        grid-template-rows: repeat(2, min-content);
+        justify-items: center;
+        z-index: 2; }
+    .plans__tiers-3 {
+      background-color: #ffffff;
+      width: 37.4rem;
+      height: 64.4rem;
+      border-radius: 20px;
+      box-shadow: 0 0.2rem 0.2rem rgba(22, 28, 40, 0.2);
+      display: grid;
+      grid-template-rows: max-content repeat(2, min-content) 1fr;
+      justify-items: center;
+      align-items: center;
+      display: grid;
+      justify-items: center; }
+      .plans__tiers-3--h3 {
+        color: #191A15;
+        margin-top: 4rem; }
+      .plans__tiers-3--h3_3 {
+        color: #191A15; }
+        .plans__tiers-3--h3_3---sup {
+          color: #A6A6A6; }
+      .plans__tiers-3--p3 {
+        color: #A6A6A6;
+        display: grid;
+        grid-template-rows: repeat(2, min-content);
+        justify-items: center; }
+    .plans__tiers-features {
+      display: grid;
+      grid-template-rows: 1fr min-content;
+      z-index: 2; }
+      .plans__tiers-features--items {
+        background-color: #F9FAFB;
+        height: 38rem;
+        width: 33.4rem;
+        border-radius: 10px;
+        padding: 2rem 0 2rem 0;
+        display: grid;
+        grid-template-rows: 1fr min-content;
+        justify-items: center; }
+        .plans__tiers-features--items---content {
+          display: grid;
+          grid-template-rows: repeat(5, 1fr);
+          row-gap: 2rem; }
+          .plans__tiers-features--items---content----block {
+            display: grid;
+            grid-template-columns: min-content 1fr;
+            column-gap: 1.5rem; }
+            .plans__tiers-features--items---content----block-----icon {
+              background-color: #54BD95;
+              border-radius: 50px;
+              width: 3.2rem;
+              height: 3.2rem;
+              justify-self: start;
+              align-self: center;
+              display: grid;
+              grid-template-columns: 1fr; }
+              .plans__tiers-features--items---content----block-----icon------wrap {
+                width: 2rem;
+                height: 2rem;
+                fill: #ffffff;
+                justify-self: center;
+                align-self: center; }
+            .plans__tiers-features--items---content----block-----p1 {
+              color: #191A15;
+              font-weight: 500;
+              justify-self: start;
+              align-self: center; }
+      .plans__tiers-features--btn1 {
+        background-color: #ffffff;
+        color: #54BD95;
+        font-weight: 600;
+        width: 26rem;
+        height: 6.4rem;
+        border-radius: 20px;
+        border: none;
+        margin-top: 2rem;
+        box-shadow: 0 0.2rem 0.2rem rgba(22, 28, 40, 0.2); }
+      .plans__tiers-features--btn2 {
+        background-color: #54BD95;
+        color: #ffffff;
+        font-weight: 600;
+        width: 26rem;
+        height: 6.4rem;
+        border-radius: 20px;
+        border: none;
+        margin-top: 2rem;
+        box-shadow: 0 0.2rem 0.2rem rgba(22, 28, 40, 0.2);
+        z-index: 2; }
+      .plans__tiers-features--btn3 {
+        background-color: #ffffff;
+        color: #54BD95;
+        font-weight: 600;
+        width: 26rem;
+        height: 6.4rem;
+        border-radius: 20px;
+        border: none;
+        margin-top: 2rem;
+        box-shadow: 0 0.2rem 0.2rem rgba(22, 28, 40, 0.2); }
 
 .subscribe {
   background-color: burlywood;
