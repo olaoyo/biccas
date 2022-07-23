@@ -1,4 +1,16 @@
 .testimonials {
-    background-color: indianred;
-    grid-column: center-start / col-end 4;
+  background-color: $color-blue-1;
+  grid-column: left-start / right-end;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  &__users {
+    grid-column: 2 / 6;
+  }
+
+  &__cta {
+    grid-column: 7 / 11;
+  }
+
 }

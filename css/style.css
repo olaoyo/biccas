@@ -217,10 +217,6 @@ body {
     column-gap: 2.5rem;
     justify-items: center; }
 
-.cta {
-  background-color: blue;
-  grid-column: col-start 6 / center-end; }
-
 .features {
   background-color: #ffffff;
   grid-column: center-start / center-end;
@@ -904,8 +900,14 @@ body {
   grid-column: center-start / col-end 4; }
 
 .testimonials {
-  background-color: indianred;
-  grid-column: center-start / col-end 4; }
+  background-color: #161C28;
+  grid-column: left-start / right-end;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); }
+  .testimonials__users {
+    grid-column: 2 / 6; }
+  .testimonials__cta {
+    grid-column: 7 / 11; }
 
 .heading-1 {
   font-size: 8rem; }
